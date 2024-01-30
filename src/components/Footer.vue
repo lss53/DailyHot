@@ -2,11 +2,7 @@
   <footer>
     <div class="copyright">
       <n-text class="description" v-html="packageJson.description" />
-      <n-text
-        class="author"
-        :depth="3"
-        v-html="packageJson.author"
-      />
+      <n-text class="author" v-html="packageJson.author" />
     </div>
     <n-text
       v-if="icp"
