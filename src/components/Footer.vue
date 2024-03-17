@@ -2,7 +2,12 @@
   <footer>
     <div class="copyright">
       <n-text class="description" v-html="packageJson.description" />
-      <n-text class="author" v-html="packageJson.author" />
+      <n-text
+        class="author"
+        :depth="3"
+        v-html="packageJson.author"
+        @click="jumpLink(packageJson.github)"
+      />
     </div>
     <n-text
       v-if="icp"
@@ -39,12 +44,13 @@ footer {
     margin-bottom: 4px;
     .description {
       &::after {
-        content: "© Copyright ";
+        content: "@ Copyright By";
         margin: 0 6px;
       }
     }
   }
   .author {
+    cursor: pointer;
     transition: all 0.3s;
     &:hover {
       color: var(--n-code-text-color);
