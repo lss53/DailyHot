@@ -50,7 +50,7 @@ footer {
     }
   }
   .author {
-    //cursor: pointer;
+    cursor: pointer;
     transition: all 0.3s;
     &:hover {
       color: var(--n-code-text-color);
